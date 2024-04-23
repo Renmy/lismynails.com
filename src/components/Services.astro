@@ -1,0 +1,58 @@
+---
+import bg_services from "../images/bg_services2.jpg";
+import experience_ico from "../images/icons/experience.svg";
+import customers from "../images/icons/customers.svg";
+import designs from "../images/icons/designs1.svg";
+import ServicesCard from "./ServicesCard.astro";
+import service2 from "../images/services2.png"
+---
+
+
+<section class="relative w-full flex h-full flex-col items-center justify-center">
+    <img src={bg_services.src} alt="lismy hero" class="absolute h-full w-full object-cover opacity-20">
+    <div class="relative bg-white flex lg:flex-row flex-col items-center justify-between text-center p-8 w-full lg:w-3/5 lg:rounded-3xl shadow-md lg:-mt-20 ">
+        <div class="flex flex-col items-center justify-center space-y-2 lg:w-1/3 p-2">
+            <img src={experience_ico.src} alt="experience icon" class="h-10" />
+            <span class="text-pink-500 text-lg font-semibold">+10 AÑOS DE EXPERIENCIA</span>
+        </div>
+        <div class="flex flex-col items-center justify-center lg:border-y-0 space-y-2 py-2 lg:border-x-2 border-y-2 border-pink-400 lg:w-1/3 mb-2 lg:mb-0">
+            <img src={customers.src} alt="customers icon" class="h-10"/>
+            <span class="text-pink-500 text-lg font-semibold">100% CLIENTAS SATISFECHAS</span>
+        </div>
+        <div class="flex flex-col items-center justify-center space-y-2 lg:w-1/3 p-2">
+            <img src={designs.src} alt="customers icon" class="h-10"/>
+            <span class="text-pink-500 text-lg font-semibold">DISEÑOS &Uacute;NICOS Y ATREVIDOS </span>
+        </div>
+    </div>
+
+    <div class="relative flex flex-col gap-12 items-center text-justify  justify-center  w-full lg:w-3/5">
+        <h1 class="text-4xl text-pink-500 font-semibold lg:mt-20 mt-8">Mis Servicios</h1>
+        <div class="flex flex-col lg:flex-row justify-between gap-4">
+            <img src={service2.src} alt="manicure services" class="p-2 h-full ">
+            <div class="flex flex-col space-y-2 justify-center items-center lg:items-start p-10" >
+                <h1 class="text-2xl font-semibold text-pink-500">SPA Manicure y Pedicure</h1>
+                <p class="text-gray-600 font-medium text-lg">¿Listo para deslumbrar con tus manos? En nuestro salón de manicure, te ofrecemos un espacio donde la creatividad y el cuidado personal se encuentran para darle vida a tus manos. Ven y explora nuestra amplia gama de servicios y colores de última tendencia. ¡No esperes más, reserva tu espacio hoy y prepárate para capturar todas las miradas!</p>
+                <button class="p-2 border-2 border-pink-500 w-36 rounded-2xl text-lg font-semibold text-gray-600 hover:scale-105 hover:text-white hover:bg-pink-500 transition ">Agenda Cita</button>
+            </div>
+        </div>
+        <div class="flex flex-col-reverse lg:flex-row justify-between gap-4">
+            <div class="flex flex-col space-y-2 justify-center items-center lg:items-start p-10" >
+                <h1 class="text-2xl font-semibold text-pink-500">SPA Manicure y Pedicure</h1>
+                <p class="text-gray-600 font-medium text-lg">¿Listo para deslumbrar con tus manos? En nuestro salón de manicure, te ofrecemos un espacio donde la creatividad y el cuidado personal se encuentran para darle vida a tus manos. Ven y explora nuestra amplia gama de servicios y colores de última tendencia. ¡No esperes más, reserva tu espacio hoy y prepárate para capturar todas las miradas!</p>
+                <button class="p-2 border-2 border-pink-500 w-36 rounded-2xl text-lg font-semibold text-gray-600 hover:scale-105 hover:text-white hover:bg-pink-500 transition ">Agenda Cita</button>
+            </div>
+            <img src={service2.src} alt="manicure services" class="p-2 h-full">
+        </div>
+        <div class="flex flex-col lg:flex-row  justify-between gap-4">
+            <img src={service2.src} alt="manicure services" slot="left" class="p-2 h-full">
+            <div class="flex flex-col space-y-2 justify-center items-center lg:items-start p-10">
+                <h1 class="text-2xl font-semibold text-pink-500">SPA Manicure y Pedicure</h1>
+                <p class="text-gray-600 font-medium text-lg">¿Listo para deslumbrar con tus manos? En nuestro salón de manicure, te ofrecemos un espacio donde la creatividad y el cuidado personal se encuentran para darle vida a tus manos. Ven y explora nuestra amplia gama de servicios y colores de última tendencia. ¡No esperes más, reserva tu espacio hoy y prepárate para capturar todas las miradas!</p>
+                <button class="p-2 border-2 border-pink-500 w-36 rounded-2xl text-lg font-semibold text-gray-600 hover:scale-105 hover:text-white hover:bg-pink-500 transition ">Agenda Cita</button>
+            </div>
+        </div>
+            
+           
+    </div> 
+    
+</section>
