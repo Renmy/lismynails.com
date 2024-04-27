@@ -1,0 +1,57 @@
+---
+import { Astronav , MenuIcon, MenuItems, OpenIcon, CloseIcon, StickyHeader } from "astro-navbar";
+import { useState } from "react";
+import '@fontsource/love-light';
+import menuopen from "../images/icons/menu-open.svg";
+import menuclose from "../images/icons/menu-close.svg";
+import nailogo from '../images/icons/nailogo.svg'
+---
+
+<StickyHeader
+    class="sticky top-0 border-b z-20 bg-white/80 transition-all md:flex gap-5 px-4"
+    scrollY={50}
+    defaultClass="py-3 border-trasparent"
+    activeClass="py-2  border-gray-200 backdrop-blur-md"
+>
+    <Astronav closeOnClick>
+        <div class="flex w-full justify-between">
+            <a class="logo flex items-center px-4 space-x-1" href='/'>
+                <h1 class="text-pink-500 text-4xl  tracking-wider">Lismy Nails</h1>
+                <img src={nailogo.src} alt="nail bottle" class='h-8 scale-125' />
+            </a>
+            <div class="block md:hidden" onclick=console.log('test')>
+                <MenuIcon class="block md:hidden" >
+                    <OpenIcon>
+                        <img src={menuopen.src} alt="menu open">
+                    </OpenIcon>
+                    <CloseIcon>
+                        <img src={menuclose.src} alt="menu close">
+                    </CloseIcon>
+                </MenuIcon>
+            </div>
+        </div>
+        <MenuItems class="hidden md:flex w-full md:justify-end">
+            <ul class="absolute w-[30%] right-0 flex flex-col md:flex-row md:gap-5 items-center py-2 bg-white mt-4">
+                <li>
+                    <a>Servicios</a>
+                </li>
+                <li>
+                    <a>Quién es Lis</a>
+                </li>
+                <li>
+                    <a>Galeria</a>
+                </li>
+                <li>
+                    <a>Contacto</a>
+                </li>
+            </ul>
+        </MenuItems>
+    </Astronav>
+
+</StickyHeader>
+
+<style>
+    .logo h1 {
+    font-family: 'Love Light', cursive;
+    }   
+</style>

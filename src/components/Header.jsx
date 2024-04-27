@@ -1,40 +1,80 @@
-import React from 'react'
-import nav_insta from '../images/icons/instagram.svg'
-import nav_whatsapp from '../images/icons/whatsapp1.svg'
-import nav_tel from '../images/icons/phone.svg'
-import nailogo from '../images/icons/nailogo.svg'
-import '../styles/header.css'
+import { useState } from 'react';
+import Sidebar from './Sidebar';
+import nav_insta from '../images/icons/instagram.svg';
+import nav_whatsapp from '../images/icons/whatsapp1.svg';
+import nav_tel from '../images/icons/phone.svg';
+import nailogo from '../images/icons/nailogo.svg';
+import menuopen from '../images/icons/menu-open.svg';
+import '../styles/header.css';
 import '@fontsource/love-light';
 
 
 
 export default function Header() {
+
+    const [ openMenu, setOpenMenu ] = useState(false)
+    //-----Modifying Header Menu on Scroll--------------------------------
+    let scrollPos = 0;
+    let ticking = false;
+    const scrollY = 50;
+    //-----function overwrite with what should does when scroll-------------
+    function OnScroll(scrollPos) {
+        const head = document.querySelector(".sticky-header")
+        if( scrollPos > scrollY ) {
+            head.classList.remove("md:w-3/5",  "md:rounded-b-xl");
+            head.classList.add("md:w-full",  "rounded-none");
+            head.setAttribute("active", "");
+        }
+        if( scrollPos < Math.max(scrollY - 20 ,0)) {
+            head.classList.remove("md:w-full", "rounded-none");
+            head.classList.add("md:w-3/5",  "md:rounded-b-xl");
+            head.removeAttribute("active", "");
+        }
+    }
+    //------Call to function on Scroll eventListener--------------------------------
+    document.addEventListener("scroll", (event) => {
+        scrollPos = window.scrollY;
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            OnScroll(scrollPos);
+            ticking = false;
+          });
+      
+          ticking = true;
+        }
+      });
+    //-------------------------------------------------------  
+      
+
   return (
-    <header className='relative py-2 mx-auto z-20 flex flex-row  lg:w-3/5 lg:rounded-b-xl shadow-lg shadow-gray-500 bg-slate-50 '>
-        <div className="logo w-1/2 flex items-center px-4 space-x-1">
-            <h1 className="text-pink-500 text-3xl  tracking-wider">Lismy Nails</h1>
-            <img src={nailogo.src} alt="nail bottle" className='h-8 scale-125' />
-        </div>
-        <nav className="text-white hidden lg:flex lg:flex-grow lg:items-center lg:text-center lg:justify-center w-2/3 space-x-4">
-            <a className="hover:scale-105" href="/">Servicios</a>   
-            <a className="hover:scale-105" href="/">Quien es Lis</a>   
-            <a className="hover:scale-105" href="/">Blog</a>    
-            <a className="hover:scale-105" href="/">Contacto</a>  
+    <header className="sticky sticky-header top-0 z-20 p-2 mx-auto flex justify-between md:w-3/5 md:rounded-b-xl shadow-lg shadow-gray-500 bg-slate-50 transiticle ">
+        <a className="logo md:w-1/3 flex items-center px-4 space-x-1" href='/'>
+            <h1 className="text-pink-500 text-4xl  tracking-wider">Lismy Nails</h1>
+            <img src={nailogo.src} alt="nail bottle" className="h-8 scale-125" />
+        </a>
+        <nav className="hidden md:flex  md:items-center md:text-center md:justify-center md:w-2/3 w-1/2 ">
+            <div className="flex items-center justify-center space-x-4 w-3/4">
+                <a className="hover:scale-105" href="#services">Servicios</a>   
+                <a className="hover:scale-105" href="#about-me">¿Quien es Lis?</a>   
+                <a className="hover:scale-105" href="#galery">Galeria</a>    
+                <a className="hover:scale-105" href="#contact">Contacto</a>  
+            </div>
+            <div className=" flex flex-col items-center justify-center w-1/4 space-y-2 border-l-2 border-pink-500">
+                <div className="flex gap-3 lg:gap-4 ">
+                    <a className="hover:scale-110" href="https://www.instagram.com/lismynails/" target='_blank'>
+                        <img src={nav_insta.src} alt="instagram" className="my-1" />    
+                    </a>    
+                    <a className="hover:scale-110" href="http://wa.me/19544775261" target='_blank'>
+                        <img src={nav_whatsapp.src}  alt="whatsapp" className="my-1" />    
+                    </a>    
+                    <a className="hover:scale-110" href="tel:9544775261" target='_blank'>
+                        <img src={nav_tel.src}  alt="telephone" className="my-1" />    
+                    </a>    
+                </div>
+            </div> 
         </nav> 
-        <span className="border border-pink-400"></span> 
-        <div className="px-4 flex flex-col items-center justify-center w-1/2 lg:w-1/4 space-y-2">
-            <nav className="flex flex-row gap-3 lg:gap-4 pb-1">
-                <a className="hover:scale-110" href="/">
-                    <img src={nav_insta.src} alt="instagram" class="mb-1" />    
-                </a>    
-                <a className="hover:scale-110" href="/">
-                    <img src={nav_whatsapp.src}  alt="whatsapp" className="mb-1" />    
-                </a>    
-                <a className="hover:scale-110" href="/">
-                    <img src={nav_tel.src}  alt="telephone" className="mb-1" />    
-                </a>    
-            </nav>
-        </div> 
+        <Sidebar openMenu={openMenu} setOpenMenu={setOpenMenu} />  
+        <img src={menuopen.src} alt="menu open icon" className="block md:hidden" onClick={() => setOpenMenu(true)}/>
     </header>
   )
 }

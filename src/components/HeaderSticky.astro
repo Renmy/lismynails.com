@@ -1,0 +1,13 @@
+---
+import { StickyHeader } from "astro-navbar";
+import Header from "./Header";
+---
+
+<StickyHeader
+    class="sticky top-0 flex transition-all z-20 md:ml-[20%] h-full "
+    scrollY={50}
+    defaultClass="flex md:w-3/5 md:rounded-b-xl border-trasparent"
+    activeClass="w-full opacity-90 backdrop-blur-md rounded-none md:ml-0"
+>
+    <Header client:load/>
+</StickyHeader>
