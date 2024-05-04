@@ -20,10 +20,6 @@ import email from "../images/icons/email.svg"
             </iframe>
             <div class="flex flex-col justify-center space-y-3 text-gray-500 font-semibold p-10">
                 <h1 class="text-2xl text-pink-500 text-center">Info de Contacto</h1>
-                <div class="flex items-center">                    
-                    <img src={location.src} alt="phone icon" class="h-8 pr-2"/>
-                    <p>700 NW 214th St, Apt 109, Miami Gardens, 33169. </p>
-                </div>
                 <a href="mailto: lismy2807@gmail.com" class="flex items-center">
                     <img src={email.src} alt="phone icon" class="h-8 pr-2"/>
                     lismy2807@gmail.com
@@ -32,10 +28,20 @@ import email from "../images/icons/email.svg"
                     <img src={smartphone.src} alt="phone icon" class="h-8 pr-2"/>
                     (954) 477-5261
                 </a>
-                <h1 class="text-2xl text-pink-500 text-center">Horarios</h1>
-                <p>DOM - MIE: 08:00 AM - 08:00 PM</p>
-                <p>JUE - SAB: SALON HASTA 07:00 PM</p>
+                <div class="flex items-center">                    
+                    <img src={location.src} alt="phone icon" class="h-8 pr-2"/>
+                    <p>700 NW 214th St, Apt 109, Miami Gardens, 33169. </p>
+                </div>
+                <h1 class="text-2xl text-pink-500 text-center p-4">Horarios</h1>
+                <p class="text-center">DOM - MIE: 08:00 AM - 08:00 PM</p>
+                <p class="pb-10 text-center">JUE - SAB: SALON HASTA 07:00 PM</p>
+                <a href="https://www.fresha.com/es/book-now/lismynails-vuyfv72v/services?lid=1287814&eid=2979568&pId=1222535" target= "_blank">
+                    <button 
+                    class="text-2xl border-2 font-bold hover:bg-pink-500 py-4 px-8  rounded-2xl hover:scale-105 
+                    hover:text-white border-pink-500 text-pink-500 transition"
+                    >BOOK NOW</button>
+                </a>
             </div>      
-        </div>
+        </div>        
     </div>
-    </section>
+</section>

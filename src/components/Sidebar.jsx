@@ -1,4 +1,3 @@
-import React from 'react'
 import { Transition } from '@headlessui/react'
 import menuClose from "../images/icons/menu-close.svg"
 import nav_insta from '../images/icons/instagram.svg';

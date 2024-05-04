@@ -1,0 +1,22 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.astro';
+---
+
+
+<Layout title="Lismy Nails - Booking">
+    <div class="h-screen w-full">
+            <!-- Start Square Appointments Embed Code -->
+            <script is:inline src='https://square.site/appointments/buyer/widget/vlqbtyv1hlihhj/L3HAPT143MZ50.js'></script>
+            <!-- End Square Appointments Embed Code -->
+    </div>
+    <Footer />
+</Layout>
+
+<style>
+    .wally-main-item {
+        display: none !important;
+    }
+</style>
