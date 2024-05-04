@@ -52,26 +52,24 @@ export default function Header() {
             <h1 className="text-pink-500 text-4xl  tracking-wider">Lismy Nails</h1>
             <img src={nailogo.src} alt="nail bottle" className="h-8 scale-125" />
         </a>
-        <nav className="hidden md:flex  md:items-center md:text-center md:justify-center md:w-2/3 w-1/2 ">
-            <div className="flex items-center justify-center space-x-4 w-3/4">
+        <nav className="hidden md:flex  md:items-center md:text-center md:justify-center md:w-2/3 w-1/2 gap-4 ">
+            <div className="flex items-center justify-end space-x-4 w-3/4 px-6">
                 <a className="hover:scale-105" href="#services">Servicios</a>   
                 <a className="hover:scale-105" href="#about-me">¿Quien es Lis?</a>   
                 <a className="hover:scale-105" href="#">Galeria</a>    
                 <a className="hover:scale-105" href="#contact">Contacto</a>  
             </div>
-            <div className=" flex flex-col items-center justify-center w-1/4 space-y-2 border-l-2 border-pink-500">
-                <div className="flex gap-3 lg:gap-4 ">
-                    <a className="hover:scale-110" href="https://www.instagram.com/lismynails/" target='_blank'>
-                        <img src={nav_insta.src} alt="instagram" className="my-1" />    
-                    </a>    
-                    <a className="hover:scale-110" href="http://wa.me/19544775261" target='_blank'>
-                        <img src={nav_whatsapp.src}  alt="whatsapp" className="my-1" />    
-                    </a>    
-                    <a className="hover:scale-110" href="tel:9544775261" target='_blank'>
-                        <img src={nav_tel.src}  alt="telephone" className="my-1" />    
-                    </a>    
-                </div>
-            </div> 
+            <div className="flex justify-center md:gap-4 border-l-2 border-pink-500 items-center w-auto px-10">
+                <a className="hover:scale-110" href="https://www.instagram.com/lismynails/" target='_blank'>
+                    <img src={nav_insta.src} alt="instagram" className="my-1" />    
+                </a>    
+                <a className="hover:scale-110" href="http://wa.me/19544775261" target='_blank'>
+                    <img src={nav_whatsapp.src}  alt="whatsapp" className="my-1" />    
+                </a>    
+                <a className="hover:scale-110" href="tel:9544775261" target='_blank'>
+                    <img src={nav_tel.src}  alt="telephone" className="my-1" />    
+                </a>    
+            </div>
         </nav> 
         <Sidebar openMenu={openMenu} setOpenMenu={setOpenMenu} />  
         <img src={menuopen.src} alt="menu open icon" className="block md:hidden" onClick={() => setOpenMenu(true)}/>

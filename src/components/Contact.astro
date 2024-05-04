@@ -2,10 +2,12 @@
 import smartphone from "../images/icons/smartphone.svg"
 import location from "../images/icons/location.svg"
 import email from "../images/icons/email.svg"
+import bg_contact from "../images/bg_contact.jpg"
 ---
 
-<section id="contact" class="w-full flex flex-col items-center justify-center py-10 ">
-    <div class="w-full md:w-3/5 flex flex-col items-center justify-center ">
+<section id="contact" class="relative w-full flex flex-col items-center justify-center py-10 ">
+    <img src={bg_contact.src} alt="" class="absolute h-full w-full object-cover opacity-10 z-0">
+    <div class="relative w-full md:w-3/5 flex flex-col items-center justify-center ">
         <h1 class="text-3xl text-pink-500 font-semibold">Dónde Encontrarme</h1>
         <div class="flex flex-col md:flex-row-reverse py-10 justify-between gap-4 w-full"> 
             <iframe 
@@ -35,7 +37,7 @@ import email from "../images/icons/email.svg"
                 <h1 class="text-2xl text-pink-500 text-center p-4">Horarios</h1>
                 <p class="text-center">DOM - MIE: 08:00 AM - 08:00 PM</p>
                 <p class="pb-10 text-center">JUE - SAB: SALON HASTA 07:00 PM</p>
-                <a href="https://www.fresha.com/es/book-now/lismynails-vuyfv72v/services?lid=1287814&eid=2979568&pId=1222535" target= "_blank">
+                <a href="https://www.fresha.com/es/book-now/lismynails-vuyfv72v/services?lid=1287814&eid=2979568&pId=1222535" target= "_blank" class="self-center">
                     <button 
                     class="text-2xl border-2 font-bold hover:bg-pink-500 py-4 px-8  rounded-2xl hover:scale-105 
                     hover:text-white border-pink-500 text-pink-500 transition"
