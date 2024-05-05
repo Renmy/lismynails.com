@@ -5,7 +5,7 @@ import email from "../images/icons/email.svg"
 import bg_contact from "../images/bg_contact.jpg"
 ---
 
-<section id="contact" class="relative w-full flex flex-col items-center justify-center py-10 ">
+<section id="contact" class="relative w-full flex flex-col items-center justify-center py-10 bg-pink-100">
     <img src={bg_contact.src} alt="" class="absolute h-full w-full object-cover opacity-10 z-0">
     <div class="relative w-full md:w-3/5 flex flex-col items-center justify-center ">
         <h1 class="text-3xl text-pink-500 font-semibold">Dónde Encontrarme</h1>
@@ -21,7 +21,7 @@ import bg_contact from "../images/bg_contact.jpg"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
             <div class="flex flex-col justify-center space-y-3 text-gray-500 font-semibold p-10">
-                <h1 class="text-2xl text-pink-500 text-center">Info de Contacto</h1>
+                <h1 class="text-2xl text-pink-500 py-2 ">Info de Contacto</h1>
                 <a href="mailto: lismy2807@gmail.com" class="flex items-center">
                     <img src={email.src} alt="phone icon" class="h-8 pr-2"/>
                     lismy2807@gmail.com
@@ -32,11 +32,11 @@ import bg_contact from "../images/bg_contact.jpg"
                 </a>
                 <div class="flex items-center">                    
                     <img src={location.src} alt="phone icon" class="h-8 pr-2"/>
-                    <p>700 NW 214th St, Apt 109, Miami Gardens, 33169. </p>
+                    <p>700 NW 214th St, Apt 109,<br class="block md:hidden"> Miami Gardens, 33169. </p>
                 </div>
-                <h1 class="text-2xl text-pink-500 text-center p-4">Horarios</h1>
-                <p class="text-center">DOM - MIE: 08:00 AM - 08:00 PM</p>
-                <p class="pb-10 text-center">JUE - SAB: SALON HASTA 07:00 PM</p>
+                <h1 class="text-2xl text-pink-500  py-4">Horarios</h1>
+                <p class="t">DOM - MIE: 08:00 AM - 08:00 PM</p>
+                <p class="pb-10 ">JUE - SAB: SALON HASTA 07:00 PM</p>
                 <a href="https://www.fresha.com/es/book-now/lismynails-vuyfv72v/services?lid=1287814&eid=2979568&pId=1222535" target= "_blank" class="self-center">
                     <button 
                     class="text-2xl border-2 font-bold hover:bg-pink-500 py-4 px-8  rounded-2xl hover:scale-105 
