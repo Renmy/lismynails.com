@@ -19,6 +19,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
+		<script src="../utils/aos.js"></script>
 	</body>
 </html>
 <style is:global>
@@ -34,23 +35,14 @@ const { title } = Astro.props;
 			rgba(168,85,247,1) 100%
 		);
 	}
+	body{
+		overflow-x: clip;
+	}
 	html {
 		font-family: 'Lucida Sans Regular', sans-serif;
 		font-size: small;
 		background: #f0f0f0;
 		background-size: 224px;
+		overflow-x: hidden;
 	}
-	
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-	
 </style>

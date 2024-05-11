@@ -47,7 +47,7 @@ export default function Header() {
       
 
   return (
-    <header className="sticky sticky-header top-0 z-20 p-2 mx-auto flex justify-between md:w-3/5 md:rounded-b-xl shadow-lg shadow-gray-500 bg-slate-50 transition ">
+    <header className="sticky sticky-header top-0 z-20 p-2 mx-auto flex justify-between md:w-3/5 md:rounded-b-xl shadow-lg shadow-gray-500 bg-slate-50 transition-all ">
         <a className="logo md:w-1/3 flex items-center px-4 space-x-1" href='/'>
             <h1 className="text-pink-500 text-4xl  tracking-wider">Lismy Nails</h1>
             <img src={nailogo.src} alt="nail bottle" className="h-8 scale-125" />

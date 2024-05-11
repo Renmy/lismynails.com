@@ -6,12 +6,16 @@ import designs from "../images/icons/designs1.svg";
 import service2 from "../images/services4.png"
 import service1 from "../images/services1.png"
 import servicecard from "../images/servicescard.png"
+import { fade } from "astro:transitions";
 ---
 
 
 <section id="services" class="relative w-full flex h-full flex-col items-center justify-center ">
     <img src={bg_services.src} alt="lismy hero" class="absolute h-full w-full object-cover opacity-20">
-    <div class="relative bg-white flex lg:flex-row flex-col items-center justify-between text-center p-8 w-full lg:w-3/5 lg:rounded-3xl shadow-md lg:-mt-20 max-w-[920px] ">
+    <div 
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        class="relative bg-white flex lg:flex-row flex-col items-center justify-between text-center p-8 w-full lg:w-3/5 lg:rounded-3xl shadow-md lg:-mt-20 max-w-[920px] ">
         <div class="flex flex-col items-center justify-center space-y-2 lg:w-1/3 p-2">
             <img src={experience_ico.src} alt="experience icon" class="h-10" />
             <span class="text-pink-500 text-lg font-semibold">+10 AÑOS DE EXPERIENCIA</span>
@@ -26,11 +30,18 @@ import servicecard from "../images/servicescard.png"
         </div>
     </div>
 
-    <div  class="relative flex flex-col gap-12 items-center text-justify  justify-center  w-full lg:w-3/5 pb-16 max-w-[920px]">
-        <h1 class="text-3xl text-pink-500 font-semibold lg:mt-20 mt-8">¿Qué te Ofrezco?</h1>
-        <div class="flex flex-col lg:flex-row justify-between gap-4">
+    <div class="relative flex flex-col gap-12 items-center text-justify  justify-center  w-full lg:w-3/5 pb-16 max-w-[920px]">
+        <h1 
+            data-aos="fade-down"
+            data-aos-anchor-placement="center-bottom" 
+            class="text-3xl text-pink-500 font-semibold lg:mt-20 mt-8">¿Qué te Ofrezco?
+        </h1>
+        <div 
+            data-aos="fade-right"
+            data-aos-anchor-placement="center-bottom" 
+            class="flex flex-col lg:flex-row justify-between gap-4">
             <img src={service2.src} alt="manicure services" class="p-2 h-full ">
-            <div class="flex flex-col space-y-2 justify-center items-center lg:items-start px-10" >
+            <div class="relative flex flex-col space-y-2 justify-center items-center lg:items-start px-10" >
                 <h1 class="text-2xl font-semibold text-pink-500">SPA Manicure y Pedicure</h1>
                 <p class="text-gray-600 font-medium text-xl">¿Lista para deslumbrar con tus manos? En mi acogedor salón de manicure, te ofrezco un espacio donde la creatividad y el cuidado personal se encuentran para darle vida a tus manos. Ven y explora una amplia gama de servicios y colores de última tendencia con los diseños más atrevidos. ¡No esperes más, reserva tu espacio hoy y prepárate para capturar todas las miradas!</p>
                 <a href="https://www.fresha.com/es/book-now/lismynails-vuyfv72v/services?lid=1287814&eid=2979568&pId=1222535" target= "_blank">
@@ -38,7 +49,10 @@ import servicecard from "../images/servicescard.png"
                 </a>
             </div>
         </div>
-        <div class="flex flex-col-reverse lg:flex-row justify-between gap-4">
+        <div 
+            data-aos="fade-left"
+            data-aos-anchor-placement="center-bottom" 
+            class="flex flex-col-reverse lg:flex-row justify-between gap-4">
             <div class="flex flex-col space-y-2 justify-center items-center lg:items-start px-10" >
                 <h1 class="text-2xl font-semibold text-pink-500">El mejor cuidado para tus manos</h1>
                 <p class="text-gray-600 font-medium text-xl">¡Hola! Soy tu experta en cuidado y belleza de uñas, dedicada a proporcionarte no solo un servicio excepcional, sino también un tratamiento integral para mantener tus uñas fuertes y hermosas. En cada sesión, utilizo técnicas avanzadas y productos naturales de calidad que cuidan y embellecen tus manos. Mi objetivo es asegurar que cada detalle refleje tanto estilo como salud, para que siempre luzcas unas uñas perfectas.</p>
@@ -46,7 +60,10 @@ import servicecard from "../images/servicescard.png"
             </div>
             <img src={service1.src} alt="manicure services" class="p-2 h-full">
         </div>
-        <div class="flex flex-col lg:flex-row  justify-between gap-4">
+        <div 
+            data-aos="fade-right"
+            data-aos-anchor-placement="center-bottom" 
+            class="flex flex-col lg:flex-row  justify-between gap-4">
             <img src={servicecard.src} alt="manicure services" slot="left" class="p-2 h-full">
             <div class="flex flex-col space-y-2 justify-center items-center lg:items-start px-10">
                 <h1 class="text-2xl font-semibold text-pink-500">¡Diseños Increibles! ¡No es Broma!</h1>

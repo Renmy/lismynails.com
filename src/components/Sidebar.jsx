@@ -48,7 +48,7 @@ export default function Sidebar({ openMenu = false, setOpenMenu }) {
             <a href='#contact'onClick={ () => setOpenMenu(false)}>Contacto</a>
           </li>
         </ul>
-        <hr class="h-px my-8 bg-pink-500 border-0 "></hr>
+        <hr className="h-px my-8 bg-pink-500 border-0 "></hr>
         
         <ul className="flex gap-3 w-full items-center justify-between px-8 ">
             <a href="https://www.instagram.com/lismynails/" target='_blank'>
