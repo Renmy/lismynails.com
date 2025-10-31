@@ -1,10 +1,11 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import favicon from "/favicon.svg"
+import favicon from "/favicon.svg";
 const defaulttitle = "Lismynails | Nails Salon in Plantation, FL";
-const defaultdescription = "Experience premium nail care at Lismynails in Plantation. We specialize in gel manicures, pedicures, acrylics, nail art, Gel X, Builder Gel, Apres and spa treatments for beautiful, long-lasting results.";
+const defaultdescription =
+  "Experience premium nail care at Lismynails in Plantation. We specialize in gel manicures, pedicures, acrylics, nail art, Gel X, Builder Gel, Apres and spa treatments for beautiful, long-lasting results.";
 const url = "https://lismynails.com";
-const image = `${url}/og-image.jpg`; // 1200x630px recommended OG image *** 
+const image = `${url}/og-image.jpg`; // 1200x630px recommended OG image ***
 //preload fonts before SEO metadata ex:
 // <link rel="preload" href="/fonts/YourFont.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 //export interface Props for defining page titles and descriptions, if not provided, use defaults
@@ -13,88 +14,90 @@ export interface Props {
   description?: string;
 }
 
-let {title, description}: Props = Astro.props;
+let { title, description }: Props = Astro.props;
 title ??= defaulttitle;
 description ??= defaultdescription;
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<title>{title}</title>
-		<meta name="description" content={description} />
-    	<meta name="keywords" content="nail salon, nail spa, gel manicure, pedicure, acrylic nails, nail art, beauty salon, Plantation FL, Broward County, best nail salon in Plantation" />
-    	<meta name="author" content="BizRocketUp" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!--Geo Tags - Local SEO - optimal for near me search -->
-		<meta name="geo.region" content="US-FL" />
-		<meta name="geo.placename" content="Plantation" />
-		<meta name="geo.position" content="26.1097;-80.2524" />
-		<meta name="ICBM" content="26.1097, -80.2524" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="nail salon, nail spa, gel manicure, pedicure, acrylic nails, nail art, beauty salon, Plantation FL, Broward County, best nail salon in Plantation"
+    />
+    <meta name="author" content="BizRocketUp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Geo Tags - Local SEO - optimal for near me search -->
+    <meta name="geo.region" content="US-FL" />
+    <meta name="geo.placename" content="Plantation" />
+    <meta name="geo.position" content="26.1097;-80.2524" />
+    <meta name="ICBM" content="26.1097, -80.2524" />
 
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={url} />
-		<meta property="og:title" content={title} />
-    	<meta property="og:description" content={description} />
-    	<meta property="og:image" content={image} />
-    	<meta name="twitter:card" content="summary_large_image" />
-    	<meta name="twitter:creator" content="BizRocketUp" />
-    	<meta name="twitter:title" content={title} />
-    	<meta name="twitter:description" content={description} />
-    	<meta name="twitter:image" content={image} />
-    	<meta name="twitter:image:alt" content={title} />
-		
-		<link rel="icon" type="image/svg+xml" href={favicon.src} />
-		<!-- ✅ JSON-LD goes here -->
-		<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "Nail Salon",
-			"name": "Lismynails",
-			"image": "https://lismynails.com/og-image.jpg",
-			"url": "https://lismynails.com",
-			"address": {
-			"@type": "PostalAddress",
-			"streetAddress": "801 S University Dr, C-135, Ste 11",
-			"addressLocality": "Plantation",
-			"addressRegion": "FL",
-			"postalCode": "33324",
-			"addressCountry": "US"
-			},
-			"telephone": "954-477-5243",
-			"priceRange": "$$",
-			"openingHours": "Mo-Sa 10:00-19:00"
-		}
-		</script>
-		<ViewTransitions />
-	</head>
-	<body>
-		<slot />
-		<script src="../utils/aos.js"></script>
-	</body>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="BizRocketUp" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image:alt" content={title} />
+
+    <link rel="icon" type="image/svg+xml" href={favicon.src} />
+    <!-- ✅ JSON-LD goes here -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Nail Salon",
+        "name": "Lismynails",
+        "image": "https://lismynails.com/og-image.jpg",
+        "url": "https://lismynails.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "801 S University Dr, C-135, Ste 11",
+          "addressLocality": "Plantation",
+          "addressRegion": "FL",
+          "postalCode": "33324",
+          "addressCountry": "US"
+        },
+        "telephone": "954-477-5243",
+        "priceRange": "$$",
+        "openingHours": "Mo-Sa 10:00-19:00"
+      }
+    </script>
+    <ViewTransitions />
+  </head>
+  <body>
+    <slot />
+    <script src="../utils/aos.js"></script>
+  </body><style is:global>
+    :root {
+      --accent: 136, 58, 234;
+      --accent-light: 224, 204, 250;
+      --accent-dark: 49, 10, 101;
+
+      --gradient-p: linear-gradient(
+        121deg,
+        rgba(241, 54, 152, 1) 0%,
+        rgba(134, 69, 145, 1) 55%,
+        rgba(168, 85, 247, 1) 100%
+      );
+    }
+    body {
+      overflow-x: clip;
+    }
+    html {
+      font-family: "Lucida Sans Regular", sans-serif;
+      font-size: small;
+      background: #f0f0f0;
+      background-size: 224px;
+      overflow-x: hidden;
+    }
+  </style>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		
-		--gradient-p: linear-gradient(
-			121deg, 
-			rgba(241,54,152,1) 0%,
-			rgba(134,69,145,1) 55%, 
-			rgba(168,85,247,1) 100%
-		);
-	}
-	body{
-		overflow-x: clip;
-	}
-	html {
-		font-family: 'Lucida Sans Regular', sans-serif;
-		font-size: small;
-		background: #f0f0f0;
-		background-size: 224px;
-		overflow-x: hidden;
-	}
-</style>

@@ -1,32 +1,27 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.jsx';
-import Hero from '../components/Hero.astro';
-import Services from '../components/Services.astro';
-import About from '../components/About.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
-import Reviews from '../components/Reviews.astro';
+import { ViewTransitions } from "astro:transitions";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.jsx";
+import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import Reviews from "../components/Reviews.astro";
 ---
 
-<Layout>	
-	<Header client:only="react" />
-	<Hero />
-	<Services />
-	<About />
-	<Contact />
-	<Footer />
+<Layout>
+  <Header client:only="react" />
+  <Hero />
+  <Services />
+  <About />
+  <Contact />
+  <Footer />
 </Layout>
 
 <style is:global>
-	div {
-		transition: ease-in 2s linear;
-		scroll-behavior: smooth;
-	}
-
+  div {
+    transition: ease-in 2s linear;
+    scroll-behavior: smooth;
+  }
 </style>
-
-
-
-

@@ -1,11 +1,12 @@
 ---
-import { getLocalPlaceReviews } from 'google-reviews-scraping';
+import { getLocalPlaceReviews } from "google-reviews-scraping";
 
 const reviewsData = await getLocalPlaceReviews({
-  placeUrl: 'https://www.google.com/maps/place/Lismynails/@25.9715276,-80.2156413,18z/data=!4m14!1m7!3m6!1s0x88d9afb459ed8cf3:0xed5ac026becb9586!2sLismynails!8m2!3d25.9715742!4d-80.2151808!16s%2Fg%2F11vz8r1mq3!3m5!1s0x88d9afb459ed8cf3:0xed5ac026becb9586!8m2!3d25.9715742!4d-80.2151808!16s%2Fg%2F11vz8r1mq3?entry=ttu',
+  placeUrl:
+    "https://www.google.com/maps/place/Lismynails/@25.9715276,-80.2156413,18z/data=!4m14!1m7!3m6!1s0x88d9afb459ed8cf3:0xed5ac026becb9586!2sLismynails!8m2!3d25.9715742!4d-80.2151808!16s%2Fg%2F11vz8r1mq3!3m5!1s0x88d9afb459ed8cf3:0xed5ac026becb9586!8m2!3d25.9715742!4d-80.2151808!16s%2Fg%2F11vz8r1mq3?entry=ttu",
   options: {
     navigationTimeout: 7000, // Optional
-    lastCursor: '[CURSOR]', // Optional
+    lastCursor: "[CURSOR]", // Optional
   },
 });
 
@@ -13,9 +14,14 @@ console.log(reviewsData);
 ---
 
 <section class="w-full py-10">
-    <div class="flex flex-col items-center justify-center space-y-5">
-        <h1 class="text-pink-500 text-center text-3xl font-semibold">¿Qué dicen las Clientas?</h1>
-        <div data-wally-widget="662fd7dd4fde9a0015c0ae53" style="width: 100%; height: 100%;"></div>
-        <script is:inline src="https://embed.getwally.net/embed.js"></script>
+  <div class="flex flex-col items-center justify-center space-y-5">
+    <h1 class="text-pink-500 text-center text-3xl font-semibold">
+      What customers says?
+    </h1>
+    <div
+      data-wally-widget="662fd7dd4fde9a0015c0ae53"
+      style="width: 100%; height: 100%;"
+    >
     </div>
+  </div>
 </section>
